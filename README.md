@@ -1,4 +1,4 @@
-# TasC_Manager
+# Generic To-do List
 Small note : Keep in mind, I'm not very experienced ; I'll try to follow conventions but mistakes will surely happen. This is only a lil' personal project, not destined to be taken seriously c:
 
 <b>(HEAVY WIP)</b>
@@ -15,7 +15,7 @@ Use the provided Makefile. (WIP)
 
 ## Use
 General use :
-`./tasc_manager fileToLoad fileToSave -c|-r|-u ID|-d ID`
+`./todolist fileToLoad fileToSave -c|-r|-u ID|-d ID`
 - fileToLoad is the JSON File from which the data will be extracted.
 - fileToSave is the file in which the updated data will be saved. Can be the same as fileToLoad ; which will overwrite the existing file.
 - -c initiates a task-creating protocol, -r shows all tasks (for now), -u initiates a task-updating protocol, -d deletes a task.
