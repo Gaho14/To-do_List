@@ -5,4 +5,4 @@
 #include <unistd.h>
 #include "lib/cJSON.h"
 
-cJSON readJSON(char* link);
+cJSON* readJSON(char* link);

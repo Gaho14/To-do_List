@@ -3,7 +3,8 @@
 int main(int argc, char **argv)
 {
     printf("Helo");
-    readJSON(argv[1]);
+    cJSON* json = readJSON(argv[1]);
+    printf("%s", cJSON_Print(json));
 
     return EXIT_SUCCESS;
 }

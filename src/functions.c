@@ -1,6 +1,6 @@
 #include "functions.h"
 
-cJSON readJSON(char* link){
+cJSON* readJSON(char* link){
     char *content;
     struct stat info;
     
@@ -18,9 +18,12 @@ cJSON readJSON(char* link){
         read(header, &c, 1);
         content[i] = c;
     }
-    printf("%s",content);
+    if(close(header)<0){
+        perror("cl");
+        exit(EXIT_FAILURE);
+    }
 
-
-    cJSON result;
+    cJSON *result;
+    result = cJSON_Parse(content);
     return result;
 }
