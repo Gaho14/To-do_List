@@ -29,8 +29,6 @@ cJSON* readJSON(char* link){
 }
 
 void writeJSON(char* link, cJSON* json_w){
-
-    // write the JSON string to the file 
     FILE* header = fopen(link, "w"); 
     if (header == NULL) { 
         perror("cl"); 
