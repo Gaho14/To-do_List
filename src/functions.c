@@ -27,3 +27,18 @@ cJSON* readJSON(char* link){
     result = cJSON_Parse(content);
     return result;
 }
+
+void writeJSON(char* link, cJSON* json_w){
+
+    // write the JSON string to the file 
+    FILE* header = fopen(link, "w"); 
+    if (header == NULL) { 
+        perror("cl"); 
+        exit(EXIT_FAILURE); 
+    }  
+    fputs(cJSON_Print(json_w), header); 
+    if(fclose(header)!=0){
+        perror("cl");
+        exit(EXIT_FAILURE);
+    }
+}

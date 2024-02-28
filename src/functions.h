@@ -6,3 +6,4 @@
 #include "lib/cJSON.h"
 
 cJSON* readJSON(char* link);
+void writeJSON(char* link, cJSON* json_w);
